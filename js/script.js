@@ -70,5 +70,7 @@ cancelBtn.addEventListener("click", function () {
     userNameInput.value = "";
     userKmInput.value = "";
     userAgeInput.value = "";
+    userResultName.innerHTML = ``;
+    userResult.innerHTML = ``;
 })
 
