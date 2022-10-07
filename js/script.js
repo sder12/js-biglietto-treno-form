@@ -45,7 +45,17 @@ submitBtn.addEventListener("click", function () {
   console.log(oldCostDecimal);
   const basePriceDecimal = basePrice.toFixed(2);
   console.log(basePriceDecimal);
-  
+
+  //dare percentuale a cliente giusto 
+  const message ="Il prezzo del tuo biglietto è di "
+    if (userAge == "minor"){
+        alert(message + youngCostDecimal + " euro")
+    } else if (userAge == "senior"){
+        alert(message + oldCostDecimal + " euro")
+    } else{
+        alert(message + basePriceDecimal + " euro")
+    }
+
 });
 
 
