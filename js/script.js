@@ -17,7 +17,7 @@ const userResultName = document.querySelector("p.text-hello");
 console.log(userResultName);
 
 
-//Al click submit genera risultato
+//BTN GENERA---------------------------
 submitBtn.addEventListener("click", function () {
   //Visualizzazione degli input
   const userName = userNameInput.value;
@@ -51,26 +51,30 @@ submitBtn.addEventListener("click", function () {
   const basePriceDecimal = basePrice.toFixed(2);
   console.log(basePriceDecimal);
 
-  //dare percentuale a cliente giusto 
-  const message ="Il prezzo del tuo biglietto è di "
-    if (userAge == "minor"){
-        userResult.innerHTML = `${message} ${youngCostDecimal} euro`;
-    } else if (userAge == "senior"){
-        userResult.innerHTML = `${message} ${oldCostDecimal} euro`;
-    } else{
-        userResult.innerHTML = `${message} ${basePriceDecimal} euro`;
-    }
+  //dare percentuale a cliente giusto
+  const message = "Il prezzo del tuo biglietto è di ";
+  if (userAge == "minor") {
+    userResult.innerHTML = `${message} ${youngCostDecimal} euro`;
+  } else if (userAge == "senior") {
+    userResult.innerHTML = `${message} ${oldCostDecimal} euro`;
+  } else {
+    userResult.innerHTML = `${message} ${basePriceDecimal} euro`;
+  }
 
-    //fare un saluto
-    userResultName.innerHTML = `Ciao ${userName}!`;
+  //fare un saluto
+  userResultName.innerHTML = `Ciao ${userName}!`;
+  //User error
+  if (isNaN(userKm)) {
+    alert("Inserisci un valore valido nei km da percorrere");
+  }
 });
 
 
+//BTN ANNULLA---------------------------
 cancelBtn.addEventListener("click", function () {
-    userNameInput.value = "";
-    userKmInput.value = "";
-    userAgeInput.value = "";
-    userResultName.innerHTML = ``;
-    userResult.innerHTML = ``;
-})
-
+  userNameInput.value = "";
+  userKmInput.value = "";
+  userAgeInput.value = "";
+  userResultName.innerHTML = ``;
+  userResult.innerHTML = ``;
+});
