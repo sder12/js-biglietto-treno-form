@@ -8,9 +8,14 @@ console.log(userAgeInput);
 // btn
 const submitBtn = document.getElementById("submit");
 console.log(submitBtn);
+const cancelBtn = document.getElementById("cancel");
+console.log(cancelBtn);
 // result
-const userResult = document.querySelector("p");
+const userResult = document.querySelector("p.text-result");
 console.log(userResult);
+const userResultName = document.querySelector("p.text-hello");
+console.log(userResultName);
+
 
 //Al click submit genera risultato
 submitBtn.addEventListener("click", function () {
@@ -49,13 +54,21 @@ submitBtn.addEventListener("click", function () {
   //dare percentuale a cliente giusto 
   const message ="Il prezzo del tuo biglietto è di "
     if (userAge == "minor"){
-        alert(message + youngCostDecimal + " euro")
+        userResult.innerHTML = `${message} ${youngCostDecimal} euro`;
     } else if (userAge == "senior"){
-        alert(message + oldCostDecimal + " euro")
+        userResult.innerHTML = `${message} ${oldCostDecimal} euro`;
     } else{
-        alert(message + basePriceDecimal + " euro")
+        userResult.innerHTML = `${message} ${basePriceDecimal} euro`;
     }
 
+    //fare un saluto
+    userResultName.innerHTML = `Ciao ${userName}!`;
 });
 
+
+cancelBtn.addEventListener("click", function () {
+    userNameInput.value = "";
+    userKmInput.value = "";
+    userAgeInput.value = "";
+})
 
