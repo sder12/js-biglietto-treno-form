@@ -15,20 +15,22 @@
 
 <body>
     <div class="container-fluid">
-        <div class="ms_container">
-            <h1> Calcola il prezzo del tuo biglietto</h1>
+        <div class="ms_container mt-3">
+            <h1 class="text-center fs-3 fw-bold"> Calcola il prezzo del tuo biglietto</h1>
             <!-- Form -->
-            <div class="row">
-                <div class="col">
+            <div class="row mt-4">
+                <div class="col text-center">
                     <label for="user-name">Nome e Cognome</label>
-                    <input type="text" id="user-name">
+                    <input type="text" id="user-name" class="text-center">
                 </div>
-                <div class="col">
+                <div class="col text-center">
                     <label for="user-km">Km da percorrere</label>
-                    <input type="text" id="user-km">
+                    <input type="text" id="user-km" class="text-center">
                 </div>
-                <div class="col">
-                    <label for="user-age">Fascia d'età</label>
+                <div class="col text-center">
+                    <div>
+                        <label for="user-age">Fascia d'età</label>
+                    </div>
                     <select name="" id="user-age">
                         <option value="adult">Maggiorenne</option>
                         <option value="minor">Minorenne</option>
@@ -37,8 +39,8 @@
                 </div>
             </div>
             <!-- Buttons -->
-            <div class="row" id="ms_btns">
-                <div class="col">
+            <div class="row mt-3" id="ms_btns">
+                <div class="col d-flex justify-content-end">
                     <button id="submit">Genera</button>
                 </div>
                 <div class="col">
@@ -47,12 +49,31 @@
             </div>
         </div>
 
-
         <!-- Result -->
-        <div class="ms_container mt-2">
+        <div class="ms_container mt-2 ">
+            <h2 class="fs-3 fw-bold text-center">Il tuo biglietto</h2>
             <div class="row">
-                <p class="text-hello"></p>
-                <p class="text-result"></p>
+                <div class="col">
+                    <h5>Nome del passeggero</h5>
+                    <p class="text-hello"></p>
+                </div>
+                <div class="col">
+                    <h5>offerta</h5>
+                    <p>Biglietto standard</p>
+                </div>
+
+                <div class="col">
+                    <h5>carrozza</h5>
+                    <p>Numero random</p>
+                </div>
+                <div class="col">
+                    <h5>Codice Cp</h5>
+                    <p>Numero random</p>
+                </div>
+                <div class="col">
+                    <h5>Costo biglietto</h5>
+                    <p class="text-result"></p>
+                </div>            
             </div>
         </div>
     </div>
