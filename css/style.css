@@ -1,37 +1,52 @@
-body{
-    background-color: lightgray;
+body {
+  background-color: lightgrey;
 }
 
 /* Variables */
-:root{
-    --color-btn: rgb(199, 234, 255);
-    --color-border: lightskyblue;
-}       
+:root {
+  --color-btn: rgb(199, 234, 255);
+  --color-border: lightskyblue;
+}
 
 /* Wrapper */
-.ms_container{
-    width: 70%;
-    margin: 0 auto;
-    padding: 2em 1em;
-    background-color: white;
-    border-radius: 20px;
+.ms_container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 2em 1em;
+  background-color: white;
+  border-radius: 20px;
 }
 
 /* 1.CONTAINER inserisci i tuoi dati  */
 /* Styling Btn */
-#submit, #cancel{
- padding: 5px 10px;
- border-radius: 10px;
- background-color: var(--color-btn);
- border: 2px solid var(--color-border);
+#submit,
+#cancel {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: var(--color-btn);
+  border: 2px solid var(--color-border);
+}
+
+#submit:hover,
+#cancel:hover {
+  background-color: transparent;
+  cursor: pointer;
 }
 
 #user-age {
-    padding: 0.2em 3em;
+  padding: 0.2em 3em;
 }
 
 /* 2.CONTAINER il tuo biglietto */
-h5{
-    background-color: var(--color-btn);
-    padding: 1em 0.3em;
+h5 {
+  background-color: var(--color-btn);
+  padding: 1em 0.5em;
+}
+
+.text-hello, #user-offerta,
+#train-random,#cp-random, 
+.text-result{
+ border: 2px solid var(--color-btn);
+ border-radius: 5px;
+ padding: 1em 0.5em;
 }
