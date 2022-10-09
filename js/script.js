@@ -78,3 +78,20 @@ cancelBtn.addEventListener("click", function () {
   userResultName.innerHTML = ``;
   userResult.innerHTML = ``;
 });
+
+
+//Numbers RANDOM for carrozza and cp
+//variables
+const trainNumber = document.getElementById("train-random");
+console.log(trainNumber)
+const cpNumber = document.getElementById("cp-random");
+console.log(cpNumber)
+
+const trainNumberRandom = Math.floor(Math.random()* (11 - 1 )) + 1;
+console.log(trainNumberRandom)
+trainNumber.innerHTML += trainNumberRandom;
+console.log(trainNumber)
+
+const cpNumberRandom = Math.floor(Math.random()* (100001 - 1 )) + 1;
+console.log(cpNumberRandom)
+cpNumber.append(`${cpNumberRandom}`);

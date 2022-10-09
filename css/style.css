@@ -1,13 +1,7 @@
-/* RESET */
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body{
     background-color: lightgray;
 }
+
 /* Variables */
 :root{
     --color-btn: rgb(199, 234, 255);
@@ -23,6 +17,7 @@ body{
     border-radius: 20px;
 }
 
+/* 1.CONTAINER inserisci i tuoi dati  */
 /* Styling Btn */
 #submit, #cancel{
  padding: 5px 10px;
@@ -33,4 +28,10 @@ body{
 
 #user-age {
     padding: 0.2em 3em;
+}
+
+/* 2.CONTAINER il tuo biglietto */
+h5{
+    background-color: var(--color-btn);
+    padding: 1em 0.3em;
 }

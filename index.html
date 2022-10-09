@@ -28,9 +28,7 @@
                     <input type="text" id="user-km" class="text-center">
                 </div>
                 <div class="col text-center">
-                    <div>
-                        <label for="user-age">Fascia d'età</label>
-                    </div>
+                    <label for="user-age">Fascia d'età</label>
                     <select name="" id="user-age">
                         <option value="adult">Maggiorenne</option>
                         <option value="minor">Minorenne</option>
@@ -52,28 +50,31 @@
         <!-- Result -->
         <div class="ms_container mt-2 ">
             <h2 class="fs-3 fw-bold text-center">Il tuo biglietto</h2>
+            <hr>
+            <h3 class="text-uppercase fs-6">Dettagli passeggero </h3>
+            <hr>
             <div class="row">
                 <div class="col">
-                    <h5>Nome del passeggero</h5>
+                    <h5 class="text-uppercase fs-6">Nome del passeggero</h5>
                     <p class="text-hello"></p>
                 </div>
                 <div class="col">
-                    <h5>offerta</h5>
+                    <h5 class="text-uppercase fs-6">offerta</h5>
                     <p>Biglietto standard</p>
                 </div>
 
                 <div class="col">
-                    <h5>carrozza</h5>
-                    <p>Numero random</p>
+                    <h5 class="text-uppercase fs-6">carrozza</h5>
+                    <p id="train-random">Il tuo numero di carrozza è </p>
                 </div>
                 <div class="col">
-                    <h5>Codice Cp</h5>
-                    <p>Numero random</p>
+                    <h5 class="text-uppercase fs-6">Codice Cp</h5>
+                    <p id="cp-random">Il tuo numero CP è </p>
                 </div>
                 <div class="col">
-                    <h5>Costo biglietto</h5>
+                    <h5 class="text-uppercase fs-6">Costo biglietto</h5>
                     <p class="text-result"></p>
-                </div>            
+                </div>
             </div>
         </div>
     </div>
