@@ -15,7 +15,14 @@ const userResult = document.querySelector("p.text-result");
 console.log(userResult);
 const userResultName = document.querySelector("p.text-hello");
 console.log(userResultName);
-
+//OFFERTA Biglietto
+const offertaClient = document.getElementById("user-offerta");
+console.log(offertaClient);
+//variables RANDOM NUMBERS
+const trainNumber = document.getElementById("train-random");
+console.log(trainNumber);
+const cpNumber = document.getElementById("cp-random");
+console.log(cpNumber);
 
 //BTN GENERA---------------------------
 submitBtn.addEventListener("click", function () {
@@ -54,21 +61,38 @@ submitBtn.addEventListener("click", function () {
   //dare percentuale a cliente giusto
   const message = "Il prezzo del tuo biglietto è di ";
   if (userAge == "minor") {
-    userResult.innerHTML = `${message} ${youngCostDecimal} euro`;
+    userResult.innerHTML = `${message} ${youngCostDecimal}€`;
   } else if (userAge == "senior") {
-    userResult.innerHTML = `${message} ${oldCostDecimal} euro`;
+    userResult.innerHTML = `${message} ${oldCostDecimal}€`;
   } else {
-    userResult.innerHTML = `${message} ${basePriceDecimal} euro`;
+    userResult.innerHTML = `${message} ${basePriceDecimal}€`;
   }
 
   //fare un saluto
-  userResultName.innerHTML = `Ciao ${userName}!`;
+  userResultName.innerHTML = `Salve ${userName}`;
   //User error
   if (isNaN(userKm)) {
     alert("Inserisci un valore valido nei km da percorrere");
   }
-});
 
+  //OFFERTA Biglietto
+  if (userAge == "minor" || userAge == "senior") {
+    offertaClient.append(" SCONTATO");
+  } else {
+    offertaClient.append(" STANDARD");
+  }
+
+  //Numbers RANDOM for carrozza and cp
+  //Random
+  const trainNumberRandom = Math.floor(Math.random() * (11 - 1)) + 1;
+  console.log(trainNumberRandom);
+  trainNumber.innerHTML += trainNumberRandom;
+  console.log(trainNumber);
+
+  const cpNumberRandom = Math.floor(Math.random() * (100001 - 1)) + 1;
+  console.log(cpNumberRandom);
+  cpNumber.append(`${cpNumberRandom}`);
+});
 
 //BTN ANNULLA---------------------------
 cancelBtn.addEventListener("click", function () {
@@ -77,21 +101,7 @@ cancelBtn.addEventListener("click", function () {
   userAgeInput.value = "";
   userResultName.innerHTML = ``;
   userResult.innerHTML = ``;
+  offertaClient.innerHTML = "Tipologia di biglietto: ";
+  trainNumber.innerHTML = "Inserire i dati nella form ";
+  cpNumber.innerHTML = "Inserire i dati nella form ";
 });
-
-
-//Numbers RANDOM for carrozza and cp
-//variables
-const trainNumber = document.getElementById("train-random");
-console.log(trainNumber)
-const cpNumber = document.getElementById("cp-random");
-console.log(cpNumber)
-
-const trainNumberRandom = Math.floor(Math.random()* (11 - 1 )) + 1;
-console.log(trainNumberRandom)
-trainNumber.innerHTML += trainNumberRandom;
-console.log(trainNumber)
-
-const cpNumberRandom = Math.floor(Math.random()* (100001 - 1 )) + 1;
-console.log(cpNumberRandom)
-cpNumber.append(`${cpNumberRandom}`);
